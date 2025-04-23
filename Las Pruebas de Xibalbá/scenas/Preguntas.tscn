@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/Preguntas.gd" type="Script" id=1]
+
+[node name="Preguntas" type="Control"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Teoria" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Pregunta" type="Sprite" parent="CanvasLayer/Teoria"]
+
+[node name="A" type="Sprite" parent="CanvasLayer/Teoria"]
+
+[node name="B" type="Sprite" parent="CanvasLayer/Teoria"]
+
+[node name="C" type="Sprite" parent="CanvasLayer/Teoria"]
+
+[node name="D" type="Sprite" parent="CanvasLayer/Teoria"]
+
+[node name="opc" type="Sprite" parent="CanvasLayer"]
