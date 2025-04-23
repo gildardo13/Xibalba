@@ -1,0 +1,166 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://img/ui/selec/PREPA.png" type="Texture" id=1]
+[ext_resource path="res://img/ui/selec/SECUNDARIA_on.png" type="Texture" id=2]
+[ext_resource path="res://img/ui/selec/PREPA_on.png" type="Texture" id=3]
+[ext_resource path="res://img/flecha_iz.png" type="Texture" id=4]
+[ext_resource path="res://img/NUEVO/NIVEL_EDUCATIVO.png" type="Texture" id=5]
+[ext_resource path="res://img/ui/selec/PRIMARIA.png" type="Texture" id=6]
+[ext_resource path="res://img/ui/selec/SECUNDARIA.png" type="Texture" id=7]
+[ext_resource path="res://img/ui/selec/PRIMARIA_on.png" type="Texture" id=8]
+[ext_resource path="res://script/Seleccion_nivel.gd" type="Script" id=10]
+[ext_resource path="res://sound/Ambient-1.ogg" type="AudioStream" id=11]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/prepa:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/secun2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/primaria:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "anim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/prepa:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/secun2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/primaria:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Seleccion_nivel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="prepa" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 418, 589 )
+
+[node name="prepa" type="TextureButton" parent="CanvasLayer/prepa"]
+margin_left = -241.0
+margin_top = -329.0
+margin_right = 219.0
+margin_bottom = 265.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+expand = true
+
+[node name="quit2" type="Sprite" parent="CanvasLayer"]
+position = Vector2( -109, 75 )
+
+[node name="quit" type="TextureButton" parent="CanvasLayer/quit2"]
+margin_left = 228.0
+margin_top = 17.0
+margin_right = 308.0
+margin_bottom = 105.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="primaria" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1464, 589 )
+
+[node name="primaria2" type="TextureButton" parent="CanvasLayer/primaria"]
+margin_left = -199.0
+margin_top = -322.0
+margin_right = 250.0
+margin_bottom = 257.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+expand = true
+
+[node name="secun2" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 960, 584 )
+
+[node name="secun" type="TextureButton" parent="CanvasLayer/secun2"]
+margin_left = -232.0
+margin_top = -322.0
+margin_right = 224.0
+margin_bottom = 266.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+expand = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/anim = SubResource( 2 )
+
+[connection signal="pressed" from="CanvasLayer/prepa/prepa" to="." method="_on_prepa_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit2/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/primaria/primaria2" to="." method="_on_primaria2_pressed"]
+[connection signal="pressed" from="CanvasLayer/secun2/secun" to="." method="_on_secun_pressed"]

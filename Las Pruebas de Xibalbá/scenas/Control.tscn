@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://script/boton.gd" type="Script" id=1]
+[ext_resource path="res://img/palanca2.png" type="Texture" id=2]
+[ext_resource path="res://img/palanca.png" type="Texture" id=3]
+
+[node name="Control" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="joystick" type="Sprite" parent="CanvasLayer" groups=["controlPa"]]
+modulate = Color( 1, 1, 1, 0.368627 )
+position = Vector2( 323, 803 )
+scale = Vector2( 0.736842, 0.736842 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="boton" type="TouchScreenButton" parent="CanvasLayer/joystick"]
+position = Vector2( -73, -67 )
+normal = ExtResource( 2 )
+script = ExtResource( 1 )
