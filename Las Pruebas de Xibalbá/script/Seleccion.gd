@@ -31,7 +31,7 @@ func _process(delta):
 		
 		
 func _on_bplayer_pressed():
-	get_tree().change_scene("res://scenas/Cargando.tscn")
+	get_tree().change_scene("res://scenas/Seleccion_mundo.tscn")
 
 func _on_text_timeout():
 	$CanvasLayer/Juega.visible =  !$CanvasLayer/Juega.visible

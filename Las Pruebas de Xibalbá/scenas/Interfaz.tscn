@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenas/Control.tscn" type="PackedScene" id=1]
-[ext_resource path="res://img/envelope-foreground.png" type="Texture" id=2]
+[ext_resource path="res://img/NUEVO/barra.png" type="Texture" id=2]
 [ext_resource path="res://img/reloj.png" type="Texture" id=3]
 [ext_resource path="res://fuentes/Pocket Money.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://script/Interfaz.gd" type="Script" id=5]
@@ -160,8 +160,8 @@ margin_right = 960.0
 margin_bottom = 125.0
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Barra"]
-position = Vector2( 1.99997, 6 )
-scale = Vector2( 1.50625, 1.5814 )
+position = Vector2( 1.99988, -14 )
+scale = Vector2( 1.00625, 1.49474 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="CanvasLayer/Barra"]

@@ -1,5 +1,6 @@
 extends Node
 var selector = {"player": "negro", "datos": "Alan"}
+var mundo = "claro"
 var opc = 0
 var android = false
 var player_master = null

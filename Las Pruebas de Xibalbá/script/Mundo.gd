@@ -2,7 +2,14 @@ extends Node
 
 export (PackedScene) var Mob
 func _ready():
-	$TileMap.queue_free()
+	if Global.mundo == "claro":
+		$nivel2.queue_free()
+		$ParallaxBackground/ParallaxLayer/TextureRect.texture =  load("res://img/NUEVO/mundo/fondo1.png")
+	else:
+		$TileMap.queue_free()
+		$ParallaxBackground/ParallaxLayer/TextureRect.texture =  load("res://img/NUEVO/mundo/fondo2.png")
+		
+	
 	$Interfaz/Timer.start()
 	Global.OriPer = $Admin.modulate
 	iniciar()
